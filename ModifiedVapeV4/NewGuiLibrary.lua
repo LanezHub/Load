@@ -15,7 +15,7 @@ local api = {
 local function getcustomassetfunc(path)
 	if not isfile(path) then
 		local req = request({
-			Url = "https://raw.githubusercontent.com/7GrandDadPGN/VapeV4ForRoblox/main/"..path:gsub("vape/assets", "assets"),
+			Url = "https://raw.githubusercontent.com/LanezHub/Load/main/ModifiedVapeV4"..path:gsub("vape/assets", "assets"),
 			Method = "GET"
 		})
 		writefile(path, req.Body)
