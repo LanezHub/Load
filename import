@@ -3,7 +3,7 @@ local script_details = {
     version = "1.0.0",
 }
 
-local url = script_details.debug and "http://localhost:6845" or "http://26.62.149.243/test/main/Phantom%20Forces"
+local url = script_details.debug and "https://raw.githubusercontent.com/LanezHub/Load/main" or "https://raw.githubusercontent.com/LanezHub/Load/main"
 
 local out = script_details.debug and function(T, ...)
     return warn("[purple haze - debug]: "..T:format(...))
