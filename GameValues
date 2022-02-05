@@ -44,3 +44,4 @@ return {
 		mouseOffsetX = 0;
 		mouseOffsetY = 0;
 	};
+};
