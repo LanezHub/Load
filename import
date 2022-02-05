@@ -6,7 +6,7 @@ local script_details = {
 local url = script_details.debug and "https://raw.githubusercontent.com/LanezHub/Load/main" or "https://raw.githubusercontent.com/LanezHub/Load/main"
 
 local out = script_details.debug and function(T, ...)
-    return warn("[purple haze - debug]: "..T:format(...))
+    return warn("[LanezHub - debug]: "..T:format(...))
 end or function() end
 
 local function import(file)
