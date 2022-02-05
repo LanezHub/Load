@@ -40,30 +40,6 @@ local function update(input)
 	dragObject:TweenPosition(UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X, startPos.Y.Scale, yPos), "Out", "Quint", 0.1, true)
 end
 
-function nubset(set)
-	if math.random(unpack(set)) == 1 then
-		return math.random(0,9)
-	else
-		return string.char(math.random(65,90))
-	end
-end
-function RandomKey(length)
-	local STR = ''
-	local SHOW = ""
-	for i = 1, length do
-		STR = STR .. nubset({1,2})
-	end
-	for i = 1,string.len(STR),1 do
-		local STRING = string.sub(STR,i,i)
-		if math.random(1,2) == 1 then
-			SHOW = SHOW..string.lower(STRING)
-		else
-			SHOW = SHOW..STRING
-		end
-	end
-	return SHOW
-end
-
 --From: https://devforum.roblox.com/t/how-to-create-a-simple-rainbow-effect-using-tweenService/221849/2
 local chromaColor
 local rainbowTime = 5
@@ -1690,7 +1666,7 @@ function library:Init()
 		self.base.DisplayOrder = 999
 		get_hidden_gui(self.base)		
 	end
-	self.base.Name = RandomKey(math.random(16, 24))
+	self.base.Name = math.random(1,1e9)
 	self.base.Parent = game:GetService("CoreGui")
 	for _, window in next, self.windows do
 		if window.canInit and not window.init then
